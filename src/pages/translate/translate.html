@@ -6,10 +6,114 @@
 -->
 <ion-header>
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>translate</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+  <ion-grid>
+
+    <ion-row>
+
+      <ion-col col-12 *ngIf="error">
+
+        <ion-card>
+
+          <ion-card-content [ngStyle]="{'border-bottom': '3px solid #f53d3d','color':'#f53d3d'}">
+            {{ errorMessage }}
+          </ion-card-content>
+
+        </ion-card>
+
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col col-12 *ngIf="!error">
+
+        <ion-card>
+
+          <ion-card-content [ngStyle]="{'border-bottom': '3px solid #488aff','color':'#488aff'}">
+            {{ actions[action] }}
+          </ion-card-content>
+
+        </ion-card>
+
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col col-12>
+
+        <ion-item>
+
+          <ion-label color="primary" stacked>Request</ion-label>
+
+          <ion-textarea
+                  [(ngModel)]="request"
+                  (ngModelChange)="checkLength()"
+                  rows="6"
+                  cols="20"
+                  maxlength="220">
+          </ion-textarea>
+
+        </ion-item>
+
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col col-12>
+
+        <ion-item>
+
+          <ion-label color="primary" stacked>Response</ion-label>
+
+          <ion-textarea
+                  [(ngModel)]="response"
+                  placeholder="Enter a request"
+                  rows="6"
+                  cols="20"
+                  maxlength="220"
+                  disabled
+                  readonly>
+          </ion-textarea>
+
+        </ion-item>
+
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col col-4>
+
+
+      </ion-col>
+
+      <ion-col col-4>
+
+
+      </ion-col>
+
+      <ion-col col-4>
+
+
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
 
 </ion-content>
