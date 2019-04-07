@@ -9,7 +9,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>about</ion-title>
+    <ion-title>About</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -18,12 +18,12 @@
   <ion-grid>
     <ion-row>
       <ion-col col-12>
-        Dot Dash Dot
+        <span [ngStyle]="{'color':'#488aff','font-size':'18px', 'font-wight':'bold'}"> Dot Dash Dot </span>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col col-6>
-          Author:
+          <span [ngStyle]="{'color':'#488aff', 'font-wight':'bold'}">Author:</span>
       </ion-col>
       <ion-col col-6>
           Carles Forès Soto
@@ -31,10 +31,18 @@
     </ion-row>
     <ion-row>
       <ion-col col-6>
-        Version:
+        <span [ngStyle]="{'color':'#488aff', 'font-wight':'bold'}">Version:</span>
       </ion-col>
       <ion-col col-6>
         1.0
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <span [ngStyle]="{'color':'#488aff', 'font-wight':'bold'}">Motivation</span>:
+      </ion-col>
+      <ion-col col-6>
+        Do not be confused by Júlia
       </ion-col>
     </ion-row>
   </ion-grid>
